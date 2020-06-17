@@ -1,0 +1,26 @@
+{
+  "name": "dokerizenodemongo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "http-errors": "~1.6.2",
+    "is-empty": "^1.2.0",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.7",
+    "morgan": "~1.9.0",
+    "multer": "^1.4.2",
+    "path": "^0.12.7",
+    "sha1": "^1.1.1",
+    "socket.io": "^2.3.0"
+  }
+}
