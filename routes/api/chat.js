@@ -1,10 +1,21 @@
 const Chat=require('../../database/collections/chat');
+const ChatSis=require('../../database/collections/chat719');
 const express=require('express');
 const empty=require('is-empty');
 const router=express.Router();
 
 router.get('/',(req,res)=>{
     Chat.find().exec((err,docs)=>{
+        if(!empty(docs)){
+            res.json(docs);
+        }else{
+            res.json({message:'no existen mensajes'});
+        }
+    });
+});
+
+router.get('/chat719',(req,res)=>{
+    ChatSis.find().exec((err,docs)=>{
         if(!empty(docs)){
             res.json(docs);
         }else{
