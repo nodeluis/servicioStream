@@ -9,7 +9,7 @@ router.get('/',(req,res)=>{
         if(!empty(docs)){
             res.json(docs);
         }else{
-            res.json({message:'no existen mensajes'});
+            res.json([]);
         }
     });
 });
@@ -19,7 +19,7 @@ router.get('/chat719',(req,res)=>{
         if(!empty(docs)){
             res.json(docs);
         }else{
-            res.json({message:'no existen mensajes'});
+            res.json([]);
         }
     });
 });
