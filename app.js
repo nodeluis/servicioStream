@@ -49,10 +49,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-var server = http.createServer(app);
-var io = require('socket.io').listen(server);
-var soc=require('./routes/api/socket2')(io);
-
-server.listen(8000,()=>{console.log('corriendo en el puerto 8000');});
+app.listen(8000,()=>{console.log('corriendo en el puerto 8000');});
 
 module.exports = app;

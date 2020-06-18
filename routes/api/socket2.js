@@ -6,10 +6,10 @@ module.exports=(io)=>{
   io.sockets.on('connection',socket=>{
     //capturar socket
     socket.on('conectados',(data)=>{
-      //let index=arraySockets.findIndex(dat=>{return dat.nick==data.nick});
-      //if(index==-1){
+      let index=arraySockets.findIndex(dat=>{return dat.nick==data.nick});
+      if(index==-1){
         arraySockets.push(data);
-      //}
+      }
       io.sockets.emit('conectados',arraySockets);
       transmition.forEach(dat=>{
         socket.to(dat).emit('p2pinit',{id:data.id});
